@@ -553,82 +553,6 @@
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "94c0ce24-5c3c-3e3b-aad3-4c368d5e4cde",
-          "identifier" : "71a64a3c-5925-3eaf-98ac-700e2897b8f5",
-          "instanceIdentifier" : "e267edaa-018f-1000-ffff-ffffd5563a30",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "AttributesToCSV",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 630.4203213095775,
-            "y" : 547.5913827244466
-          },
-          "properties" : {
-            "null-value" : "false",
-            "include-core-attributes" : "true",
-            "destination" : "flowfile-attribute",
-            "include-schema" : "false"
-          },
-          "propertyDescriptors" : {
-            "null-value" : {
-              "displayName" : "Null Value",
-              "identifiesControllerService" : false,
-              "name" : "null-value",
-              "sensitive" : false
-            },
-            "include-core-attributes" : {
-              "displayName" : "Include Core Attributes",
-              "identifiesControllerService" : false,
-              "name" : "include-core-attributes",
-              "sensitive" : false
-            },
-            "attributes-regex" : {
-              "displayName" : "Attributes Regular Expression",
-              "identifiesControllerService" : false,
-              "name" : "attributes-regex",
-              "sensitive" : false
-            },
-            "destination" : {
-              "displayName" : "Destination",
-              "identifiesControllerService" : false,
-              "name" : "destination",
-              "sensitive" : false
-            },
-            "include-schema" : {
-              "displayName" : "Include Schema",
-              "identifiesControllerService" : false,
-              "name" : "include-schema",
-              "sensitive" : false
-            },
-            "attribute-list" : {
-              "displayName" : "Attribute List",
-              "identifiesControllerService" : false,
-              "name" : "attribute-list",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.26.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "94c0ce24-5c3c-3e3b-aad3-4c368d5e4cde",
           "identifier" : "534ad859-6e3e-3374-ad20-51ceeff554d3",
           "instanceIdentifier" : "a05ccf94-de04-354e-a51b-75541ba5c002",
           "maxBackoffPeriod" : "10 mins",
@@ -1319,7 +1243,7 @@
               "name" : "Footer File",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -1335,7 +1259,7 @@
               "name" : "Demarcator File",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -1351,7 +1275,7 @@
               "name" : "Header File",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
