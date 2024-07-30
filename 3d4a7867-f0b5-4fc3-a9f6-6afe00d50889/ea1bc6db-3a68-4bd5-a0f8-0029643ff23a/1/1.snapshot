@@ -1,0 +1,487 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "c030ba8b-0e9b-3db6-a246-dd7a37ff7c3f",
+            "instanceIdentifier" : "d4e22b1e-018d-1000-ffff-ffffe78c19f5",
+            "name" : "Retry",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "a22078a4-ca17-34d0-bd74-a8b83150694e",
+          "instanceIdentifier" : "d47b40a0-018d-1000-ffff-fffff80e55ce",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "7e7c1a35-db1d-31e8-bd6b-b32231edf75a",
+            "instanceIdentifier" : "d479a1a4-018d-1000-ffff-ffff82c20c01",
+            "name" : "Bridge_PublishMQTT",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "7e7c1a35-db1d-31e8-bd6b-b32231edf75a",
+            "instanceIdentifier" : "d479a1a4-018d-1000-ffff-ffff82c20c01",
+            "name" : "Bridge_PublishMQTT",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "27d43a94-6542-3bb7-9970-e9edc1b9becf",
+          "instanceIdentifier" : "d22cea85-018d-1000-0000-00000b2facef",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "b0452738-a1eb-34e7-98af-b96f66af92b7",
+            "instanceIdentifier" : "d22cd4df-018d-1000-0000-0000030c77be",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "b0452738-a1eb-34e7-98af-b96f66af92b7",
+            "instanceIdentifier" : "d22cd4df-018d-1000-0000-0000030c77be",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "8c0ca6cc-74c3-3cc4-84fa-2ae21f14eb39",
+          "instanceIdentifier" : "d22d0025-018d-1000-ffff-ffffce5bdd76",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "e6cc77ea-fc0b-3037-95ef-983f77771fcd",
+            "instanceIdentifier" : "d1fa8680-018d-1000-ffff-ffffe8cdff2f",
+            "name" : "BW_VerneMQ_Bridge_IN",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 2632.0,
+            "y" : 448.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "7e7c1a35-db1d-31e8-bd6b-b32231edf75a",
+            "instanceIdentifier" : "d479a1a4-018d-1000-ffff-ffff82c20c01",
+            "name" : "Bridge_PublishMQTT",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "b6d42611-7a15-330e-a04c-05137625f452",
+          "instanceIdentifier" : "d4e25352-018d-1000-0000-00000de7ee2b",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+            "id" : "c030ba8b-0e9b-3db6-a246-dd7a37ff7c3f",
+            "instanceIdentifier" : "d4e22b1e-018d-1000-ffff-ffffe78c19f5",
+            "name" : "Retry",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "e6cc77ea-fc0b-3037-95ef-983f77771fcd",
+          "instanceIdentifier" : "d1fa8680-018d-1000-ffff-ffffe8cdff2f",
+          "name" : "BW_VerneMQ_Bridge_IN",
+          "position" : {
+            "x" : 576.0,
+            "y" : 416.0
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "instanceIdentifier" : "d16bfe91-018d-1000-ffff-ffffe8718f17",
+        "labels" : [ ],
+        "name" : "BW VerneMQ Bridge",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 968.0,
+          "y" : 320.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-mqtt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 3,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "7e7c1a35-db1d-31e8-bd6b-b32231edf75a",
+          "instanceIdentifier" : "d479a1a4-018d-1000-ffff-ffff82c20c01",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Bridge_PublishMQTT",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1832.0,
+            "y" : 384.0
+          },
+          "properties" : {
+            "Client ID" : "BRIDGE_DEV_NIFI_client_${math(\"random\")}",
+            "Last Will QoS Level" : "0",
+            "Connection Timeout (seconds)" : "30",
+            "Broker URI" : "tcp://10.134.1.11:1883",
+            "Username" : "NIFI_dev",
+            "Session state" : "true",
+            "Session Expiry Interval" : "24 hrs",
+            "Quality of Service(QoS)" : "1",
+            "Topic" : "${mqtt.topic}",
+            "MQTT Specification Version" : "5",
+            "Keep Alive Interval (seconds)" : "60",
+            "Retain Message" : "false",
+            "Last Will Retain" : "false"
+          },
+          "propertyDescriptors" : {
+            "Client ID" : {
+              "displayName" : "Client ID",
+              "identifiesControllerService" : false,
+              "name" : "Client ID",
+              "sensitive" : false
+            },
+            "Last Will QoS Level" : {
+              "displayName" : "Last Will QoS Level",
+              "identifiesControllerService" : false,
+              "name" : "Last Will QoS Level",
+              "sensitive" : false
+            },
+            "Connection Timeout (seconds)" : {
+              "displayName" : "Connection Timeout (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Connection Timeout (seconds)",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "Broker URI" : {
+              "displayName" : "Broker URI",
+              "identifiesControllerService" : false,
+              "name" : "Broker URI",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "Username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "Username",
+              "sensitive" : false
+            },
+            "Session state" : {
+              "displayName" : "Session state",
+              "identifiesControllerService" : false,
+              "name" : "Session state",
+              "sensitive" : false
+            },
+            "Session Expiry Interval" : {
+              "displayName" : "Session Expiry Interval",
+              "identifiesControllerService" : false,
+              "name" : "Session Expiry Interval",
+              "sensitive" : false
+            },
+            "Quality of Service(QoS)" : {
+              "displayName" : "Quality of Service (QoS)",
+              "identifiesControllerService" : false,
+              "name" : "Quality of Service(QoS)",
+              "sensitive" : false
+            },
+            "Last Will Message" : {
+              "displayName" : "Last Will Message",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Message",
+              "sensitive" : false
+            },
+            "Last Will Topic" : {
+              "displayName" : "Last Will Topic",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Topic",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "message-demarcator" : {
+              "displayName" : "Message Demarcator",
+              "identifiesControllerService" : false,
+              "name" : "message-demarcator",
+              "sensitive" : false
+            },
+            "Topic" : {
+              "displayName" : "Topic",
+              "identifiesControllerService" : false,
+              "name" : "Topic",
+              "sensitive" : false
+            },
+            "MQTT Specification Version" : {
+              "displayName" : "MQTT Specification Version",
+              "identifiesControllerService" : false,
+              "name" : "MQTT Specification Version",
+              "sensitive" : false
+            },
+            "Keep Alive Interval (seconds)" : {
+              "displayName" : "Keep Alive Interval (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Keep Alive Interval (seconds)",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            },
+            "Retain Message" : {
+              "displayName" : "Retain Message",
+              "identifiesControllerService" : false,
+              "name" : "Retain Message",
+              "sensitive" : false
+            },
+            "Last Will Retain" : {
+              "displayName" : "Last Will Retain",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Retain",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.mqtt.PublishMQTT",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "b0452738-a1eb-34e7-98af-b96f66af92b7",
+          "instanceIdentifier" : "d22cd4df-018d-1000-0000-0000030c77be",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1128.0,
+            "y" : 384.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "mqtt.topic" : "/BRIDGE${mqtt.topic}"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "mqtt.topic" : {
+              "displayName" : "mqtt.topic",
+              "identifiesControllerService" : false,
+              "name" : "mqtt.topic",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1fbe954b-9325-34ff-b316-4ed03692c580",
+          "identifier" : "c030ba8b-0e9b-3db6-a246-dd7a37ff7c3f",
+          "instanceIdentifier" : "d4e22b1e-018d-1000-ffff-ffffe78c19f5",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Retry",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 2456.0,
+            "y" : 104.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}

@@ -1,0 +1,2655 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : {
+        "843e3608-7911-3963-8ec6-24704577eca1" : {
+          "identifier" : "843e3608-7911-3963-8ec6-24704577eca1",
+          "name" : "SupersetDB_PROD_PostgreSQL"
+        },
+        "57831c05-336f-3b11-8c8d-a9eb69adedc8" : {
+          "identifier" : "57831c05-336f-3b11-8c8d-a9eb69adedc8",
+          "name" : "StandardSSLContextService"
+        }
+      },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "b36e3ece-0666-3156-adea-734ccc535d9b",
+            "instanceIdentifier" : "cd8d2d41-c863-351b-a22f-4d07b1a03f93",
+            "name" : "Update Sql Args",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "6109dc15-160d-30f5-9dda-8562fa059a0a",
+          "instanceIdentifier" : "4cbf53b3-7fa2-318e-8c75-da7d5fe4f806",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "6db348cf-ddbd-31d4-bf3b-d4fadebc6151",
+            "instanceIdentifier" : "0f275e09-09d1-3428-9cff-4c11ec4b8635",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "2bbe8bc8-4f95-31b3-bb38-3e561294ba5e",
+            "instanceIdentifier" : "2ab250a0-68b6-383f-bbbe-964fe6087df7",
+            "name" : "Insert into mqtt_heartbeat",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "df22892b-0594-3d0d-8a22-16e195519130",
+          "instanceIdentifier" : "48f4a9b9-8978-3772-a4ed-e5741a986677",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "b36e3ece-0666-3156-adea-734ccc535d9b",
+            "instanceIdentifier" : "cd8d2d41-c863-351b-a22f-4d07b1a03f93",
+            "name" : "Update Sql Args",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "6db348cf-ddbd-31d4-bf3b-d4fadebc6151",
+            "instanceIdentifier" : "0f275e09-09d1-3428-9cff-4c11ec4b8635",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "1c6f1c0f-ffab-31a0-aaba-efe75e1bdb2d",
+          "instanceIdentifier" : "7e7375be-6cbf-3f57-8988-50a75b769a6e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "91558807-0d09-3d2c-8598-c78f73afdaec",
+            "instanceIdentifier" : "d82a9281-eecd-3bf5-9101-f34541694a20",
+            "name" : "ExecuteScript",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 1572.985443682663,
+            "y" : 840.0903394149191
+          }, {
+            "x" : 1572.985443682663,
+            "y" : 890.0903394149191
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "2bbe8bc8-4f95-31b3-bb38-3e561294ba5e",
+            "instanceIdentifier" : "2ab250a0-68b6-383f-bbbe-964fe6087df7",
+            "name" : "Insert into mqtt_heartbeat",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "4d39d648-cdb1-3451-b6c1-f0d6d7b6b006",
+          "instanceIdentifier" : "6e349cb0-9ad4-38c4-b816-1aa98c82d5cd",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "retry" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "2bbe8bc8-4f95-31b3-bb38-3e561294ba5e",
+            "instanceIdentifier" : "2ab250a0-68b6-383f-bbbe-964fe6087df7",
+            "name" : "Insert into mqtt_heartbeat",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "aefd1949-dc76-39e7-8449-0d81b6e2e4e4",
+            "instanceIdentifier" : "b94de19d-0474-3f5d-a490-28f5488a209d",
+            "name" : "FailureCatcher",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "c1fafe45-3d4d-39e4-b4a3-ccf90eb5e124",
+          "instanceIdentifier" : "2afd4a2f-5ff4-39ee-8046-e2b9ac1c153b",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "2bbe8bc8-4f95-31b3-bb38-3e561294ba5e",
+            "instanceIdentifier" : "2ab250a0-68b6-383f-bbbe-964fe6087df7",
+            "name" : "Insert into mqtt_heartbeat",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "91558807-0d09-3d2c-8598-c78f73afdaec",
+            "instanceIdentifier" : "d82a9281-eecd-3bf5-9101-f34541694a20",
+            "name" : "ExecuteScript",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "96ff94c2-0038-3ea2-8b2b-164f0b03b43a",
+          "instanceIdentifier" : "c24d6dc2-0187-1000-ffff-ffffca8f8898",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Message" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "f191ca59-a393-3c2d-9177-d0b5e6efdad6",
+            "instanceIdentifier" : "c23ff5e5-0187-1000-0000-000014612560",
+            "name" : "ConsumeMQTT",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "91558807-0d09-3d2c-8598-c78f73afdaec",
+            "instanceIdentifier" : "d82a9281-eecd-3bf5-9101-f34541694a20",
+            "name" : "ExecuteScript",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "8417de67-20a2-38b2-91f7-a8732e3e25aa",
+          "instanceIdentifier" : "08bdb146-018e-1000-ffff-ffffdab11c52",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Message" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+            "id" : "f8fc1b7c-8e2d-33a7-a888-92e51fc8d95d",
+            "instanceIdentifier" : "c24ebed9-0187-1000-0000-000025155e23",
+            "name" : "TEST_ConsumeMQTT",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "cc0d62f6-0186-1000-0000-00007c1620c2",
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "height" : 216.0,
+          "identifier" : "98f8c59a-5767-3c74-a6a1-6809e08e05ac",
+          "instanceIdentifier" : "feb3d87c-05ea-3c57-8e14-199f1b4eeb3d",
+          "label" : "/Monitoring/PC-Standard (Phinia)",
+          "position" : {
+            "x" : 416.0,
+            "y" : 152.0
+          },
+          "style" : {
+            "font-size" : "12px"
+          },
+          "width" : 408.0,
+          "zIndex" : 0
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "height" : 82.18522644042969,
+          "identifier" : "57e19f59-fbe9-3e0e-84e1-1be044372367",
+          "instanceIdentifier" : "74f9d203-20a1-328c-84cd-993b978a04e2",
+          "label" : "Machine Activity Dashboard",
+          "position" : {
+            "x" : 1162.7366762968004,
+            "y" : 309.63685897706546
+          },
+          "style" : {
+            "font-size" : "12px"
+          },
+          "width" : 406.70765686035156,
+          "zIndex" : 0
+        } ],
+        "name" : "MQTT [ /monitoring/PC-Standard ] & Machine Activity Dashboard",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 280.0,
+          "y" : -144.0
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+              "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+              "name" : "RouteOnAttribute",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "a39e86a9-0e2e-3313-b28b-8ebdca847885",
+            "instanceIdentifier" : "0781f8e5-abed-341b-8c03-ab230e74232e",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "matched" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e6aaea49-50d3-3624-92e1-9b5d606aba77",
+              "instanceIdentifier" : "813d0a4e-ebbb-3fa6-bf02-ab903abec358",
+              "name" : "EvaluateJsonPath",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 3468.4538337994545,
+              "y" : -379.8608601166361
+            }, {
+              "x" : 3468.4538337994545,
+              "y" : -329.8608601166361
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "70ecd7db-09c6-3f15-9fd3-20702fa99b4a",
+              "instanceIdentifier" : "96c5e8a3-e2e5-3c30-8760-3380addc7173",
+              "name" : "PutSQL stoppage_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "0ddcca39-1e00-300c-b766-a4bf5780d75e",
+            "instanceIdentifier" : "114a0167-8968-304a-8860-00f71768a7f5",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "retry" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "70ecd7db-09c6-3f15-9fd3-20702fa99b4a",
+              "instanceIdentifier" : "96c5e8a3-e2e5-3c30-8760-3380addc7173",
+              "name" : "PutSQL stoppage_ts",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "5bc8a8a5-0a06-3747-90ea-2d2a4a3ca7e6",
+              "instanceIdentifier" : "e89118dd-0fba-3faa-8a2c-e9ebbce70937",
+              "name" : "AttributesToJSON",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "1fbca49e-1dfa-3da0-ac5e-86a99fd5d2a8",
+            "instanceIdentifier" : "21cb0c21-c11f-3e4c-ab93-4d0df42c6c44",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "unmatched" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+              "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+              "name" : "RouteOnAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "f0e4d298-2d72-39d1-9093-dba2d67c4361",
+              "instanceIdentifier" : "416f11d9-4e55-3035-b1a9-4e2197f2053e",
+              "name" : "PutSQL fault_reset_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "9a5cf09e-fba0-3361-b97a-68eacff854a5",
+            "instanceIdentifier" : "a5206121-c4d7-370a-8a9a-a9f58c3de0f7",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "fault_reset_ts" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+              "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+              "name" : "RouteOnAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 3476.7199470807045,
+              "y" : -175.23721814886267
+            }, {
+              "x" : 3505.9675056744545,
+              "y" : -132.20091748968298
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "f0e4d298-2d72-39d1-9093-dba2d67c4361",
+              "instanceIdentifier" : "416f11d9-4e55-3035-b1a9-4e2197f2053e",
+              "name" : "PutSQL fault_reset_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "510c3688-c937-3ae6-8940-1b4f655fddf1",
+            "instanceIdentifier" : "6dc113bf-60e8-32e7-b1c2-15ddcf29a5b9",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "retry" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "f0e4d298-2d72-39d1-9093-dba2d67c4361",
+              "instanceIdentifier" : "416f11d9-4e55-3035-b1a9-4e2197f2053e",
+              "name" : "PutSQL fault_reset_ts",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 3492.2021248150795,
+              "y" : 22.939297430360966
+            }, {
+              "x" : 3531.1989509869545,
+              "y" : 71.54655533298319
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e02542f5-8839-3be1-90a8-9866982a0915",
+              "instanceIdentifier" : "4fb5effa-4446-30a3-86f5-5ba253283ae5",
+              "name" : "PutSQL start_of_cycle_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "c0ec357c-3e10-3eeb-9a1a-c4e8d0a1c40c",
+            "instanceIdentifier" : "6d7961e2-edcb-399e-a2e9-3b95f0ca82e0",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "retry" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e02542f5-8839-3be1-90a8-9866982a0915",
+              "instanceIdentifier" : "4fb5effa-4446-30a3-86f5-5ba253283ae5",
+              "name" : "PutSQL start_of_cycle_ts",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e6aaea49-50d3-3624-92e1-9b5d606aba77",
+              "instanceIdentifier" : "813d0a4e-ebbb-3fa6-bf02-ab903abec358",
+              "name" : "EvaluateJsonPath",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "2b337955-131d-3de1-b066-33720ade74b7",
+            "instanceIdentifier" : "5176cff0-a1ce-3fda-bdef-78db9c939350",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "5f5db359-c657-3441-9057-153296b6fd73",
+              "instanceIdentifier" : "efa4a318-ca17-3186-bbd8-5f8a0617acb7",
+              "name" : "ExecuteScript",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "5f5db359-c657-3441-9057-153296b6fd73",
+              "instanceIdentifier" : "efa4a318-ca17-3186-bbd8-5f8a0617acb7",
+              "name" : "ExecuteScript",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "121dca99-0385-372c-9b33-d8f085fd568d",
+            "instanceIdentifier" : "c25f7f06-0187-1000-ffff-ffffd9f9db61",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "Message" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e359920b-e805-3885-bca0-4794a4effb5f",
+              "instanceIdentifier" : "c253141d-0187-1000-ffff-ffffec026e15",
+              "name" : "ConsumeMQTT-Activity - clientID-28",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "70ecd7db-09c6-3f15-9fd3-20702fa99b4a",
+              "instanceIdentifier" : "96c5e8a3-e2e5-3c30-8760-3380addc7173",
+              "name" : "PutSQL stoppage_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "ea731641-7ac8-32b5-ac9b-c9c36d8d3263",
+            "instanceIdentifier" : "26b638d6-f232-31e2-bfe5-59443cd4790d",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "stoppage_ts" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+              "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+              "name" : "RouteOnAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "5f5db359-c657-3441-9057-153296b6fd73",
+              "instanceIdentifier" : "efa4a318-ca17-3186-bbd8-5f8a0617acb7",
+              "name" : "ExecuteScript",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "d1628984-3e90-33e6-b647-d3e70ef2e6e8",
+            "instanceIdentifier" : "08bcaf56-018e-1000-0000-00001b9f9902",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "Message" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "04821142-478f-353c-a52b-d55e2982d7d5",
+              "instanceIdentifier" : "c25d6afc-0187-1000-0000-000046264f52",
+              "name" : "TEST_ConsumeMQTT-Activity ",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "e02542f5-8839-3be1-90a8-9866982a0915",
+              "instanceIdentifier" : "4fb5effa-4446-30a3-86f5-5ba253283ae5",
+              "name" : "PutSQL start_of_cycle_ts",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "8e27657c-7e95-3b61-8010-719e1dacee9a",
+            "instanceIdentifier" : "bbff5bdf-4ef8-3518-9cb3-7f4587c55c4e",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "start_of_cycle_ts" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+              "id" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+              "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+              "name" : "RouteOnAttribute",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "ef27acc7-6fdb-334e-b291-eaa405b50470",
+          "labels" : [ ],
+          "name" : "MQTT Activity",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 1207.0317286839331,
+            "y" : 358.93265968603043
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ "success", "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 3,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "f0e4d298-2d72-39d1-9093-dba2d67c4361",
+            "instanceIdentifier" : "416f11d9-4e55-3035-b1a9-4e2197f2053e",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "PutSQL fault_reset_ts",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 3016.0,
+              "y" : -216.0
+            },
+            "properties" : {
+              "Support Fragmented Transactions" : "false",
+              "putsql-sql-statement" : "insert into mc_activity \n(machine,facility, fault_reset_ts,stoppage_fault_code, added_on, record_ts)\nvalues ('${machine}','${facility}','${fault_reset_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${fault_reset_ts})}','${stoppage_fault_code}','${now()}', '${fault_reset_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${fault_reset_ts})}')",
+              "Batch Size" : "1",
+              "Obtain Generated Keys" : "false",
+              "JDBC Connection Pool" : "843e3608-7911-3963-8ec6-24704577eca1",
+              "database-session-autocommit" : "false",
+              "rollback-on-failure" : "false"
+            },
+            "propertyDescriptors" : {
+              "Support Fragmented Transactions" : {
+                "displayName" : "Support Fragmented Transactions",
+                "identifiesControllerService" : false,
+                "name" : "Support Fragmented Transactions",
+                "sensitive" : false
+              },
+              "putsql-sql-statement" : {
+                "displayName" : "SQL Statement",
+                "identifiesControllerService" : false,
+                "name" : "putsql-sql-statement",
+                "sensitive" : false
+              },
+              "Transaction Timeout" : {
+                "displayName" : "Transaction Timeout",
+                "identifiesControllerService" : false,
+                "name" : "Transaction Timeout",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Obtain Generated Keys" : {
+                "displayName" : "Obtain Generated Keys",
+                "identifiesControllerService" : false,
+                "name" : "Obtain Generated Keys",
+                "sensitive" : false
+              },
+              "JDBC Connection Pool" : {
+                "displayName" : "JDBC Connection Pool",
+                "identifiesControllerService" : true,
+                "name" : "JDBC Connection Pool",
+                "sensitive" : false
+              },
+              "database-session-autocommit" : {
+                "displayName" : "Database Session AutoCommit",
+                "identifiesControllerService" : false,
+                "name" : "database-session-autocommit",
+                "sensitive" : false
+              },
+              "rollback-on-failure" : {
+                "displayName" : "Rollback On Failure",
+                "identifiesControllerService" : false,
+                "name" : "rollback-on-failure",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.PutSQL",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "parse.failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-mqtt-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.1"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "PRIMARY",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "e359920b-e805-3885-bca0-4794a4effb5f",
+            "instanceIdentifier" : "c253141d-0187-1000-ffff-ffffec026e15",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ConsumeMQTT-Activity - clientID-28",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 2376.0,
+              "y" : -784.0
+            },
+            "properties" : {
+              "Max Queue Size" : "100",
+              "Client ID" : "NIFI_client_28",
+              "Last Will QoS Level" : "0",
+              "Connection Timeout (seconds)" : "30",
+              "Host name verification enabled" : "false",
+              "Broker URI" : "ssl://172.30.35.90:8883",
+              "add-attributes-as-fields" : "true",
+              "SSL Context Service" : "57831c05-336f-3b11-8c8d-a9eb69adedc8",
+              "Username" : "NIFI_prod",
+              "Session state" : "true",
+              "Session Expiry Interval" : "24 hrs",
+              "Quality of Service(QoS)" : "2",
+              "Topic Filter" : "/LTM/MC-Activity/#",
+              "MQTT Specification Version" : "0",
+              "Keep Alive Interval (seconds)" : "60",
+              "Last Will Retain" : "false"
+            },
+            "propertyDescriptors" : {
+              "Max Queue Size" : {
+                "displayName" : "Max Queue Size",
+                "identifiesControllerService" : false,
+                "name" : "Max Queue Size",
+                "sensitive" : false
+              },
+              "Client ID" : {
+                "displayName" : "Client ID",
+                "identifiesControllerService" : false,
+                "name" : "Client ID",
+                "sensitive" : false
+              },
+              "Last Will QoS Level" : {
+                "displayName" : "Last Will QoS Level",
+                "identifiesControllerService" : false,
+                "name" : "Last Will QoS Level",
+                "sensitive" : false
+              },
+              "Connection Timeout (seconds)" : {
+                "displayName" : "Connection Timeout (seconds)",
+                "identifiesControllerService" : false,
+                "name" : "Connection Timeout (seconds)",
+                "sensitive" : false
+              },
+              "record-writer" : {
+                "displayName" : "Record Writer",
+                "identifiesControllerService" : true,
+                "name" : "record-writer",
+                "sensitive" : false
+              },
+              "Host name verification enabled" : {
+                "displayName" : "Host name verification enabled",
+                "identifiesControllerService" : false,
+                "name" : "Host name verification enabled",
+                "sensitive" : false
+              },
+              "Broker URI" : {
+                "displayName" : "Broker URI",
+                "identifiesControllerService" : false,
+                "name" : "Broker URI",
+                "sensitive" : false
+              },
+              "add-attributes-as-fields" : {
+                "displayName" : "Add attributes as fields",
+                "identifiesControllerService" : false,
+                "name" : "add-attributes-as-fields",
+                "sensitive" : false
+              },
+              "SSL Context Service" : {
+                "displayName" : "SSL Context Service",
+                "identifiesControllerService" : true,
+                "name" : "SSL Context Service",
+                "sensitive" : false
+              },
+              "Username" : {
+                "displayName" : "Username",
+                "identifiesControllerService" : false,
+                "name" : "Username",
+                "sensitive" : false
+              },
+              "Session state" : {
+                "displayName" : "Session state",
+                "identifiesControllerService" : false,
+                "name" : "Session state",
+                "sensitive" : false
+              },
+              "Session Expiry Interval" : {
+                "displayName" : "Session Expiry Interval",
+                "identifiesControllerService" : false,
+                "name" : "Session Expiry Interval",
+                "sensitive" : false
+              },
+              "Quality of Service(QoS)" : {
+                "displayName" : "Quality of Service (QoS)",
+                "identifiesControllerService" : false,
+                "name" : "Quality of Service(QoS)",
+                "sensitive" : false
+              },
+              "Last Will Message" : {
+                "displayName" : "Last Will Message",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Message",
+                "sensitive" : false
+              },
+              "Last Will Topic" : {
+                "displayName" : "Last Will Topic",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Topic",
+                "sensitive" : false
+              },
+              "Topic Filter" : {
+                "displayName" : "Topic Filter",
+                "identifiesControllerService" : false,
+                "name" : "Topic Filter",
+                "sensitive" : false
+              },
+              "record-reader" : {
+                "displayName" : "Record Reader",
+                "identifiesControllerService" : true,
+                "name" : "record-reader",
+                "sensitive" : false
+              },
+              "Group ID" : {
+                "displayName" : "Group ID",
+                "identifiesControllerService" : false,
+                "name" : "Group ID",
+                "sensitive" : false
+              },
+              "message-demarcator" : {
+                "displayName" : "Message Demarcator",
+                "identifiesControllerService" : false,
+                "name" : "message-demarcator",
+                "sensitive" : false
+              },
+              "MQTT Specification Version" : {
+                "displayName" : "MQTT Specification Version",
+                "identifiesControllerService" : false,
+                "name" : "MQTT Specification Version",
+                "sensitive" : false
+              },
+              "Keep Alive Interval (seconds)" : {
+                "displayName" : "Keep Alive Interval (seconds)",
+                "identifiesControllerService" : false,
+                "name" : "Keep Alive Interval (seconds)",
+                "sensitive" : false
+              },
+              "Password" : {
+                "displayName" : "Password",
+                "identifiesControllerService" : false,
+                "name" : "Password",
+                "sensitive" : true
+              },
+              "Last Will Retain" : {
+                "displayName" : "Last Will Retain",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Retain",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "1 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : {
+              "background-color" : "#30a3f0"
+            },
+            "type" : "org.apache.nifi.processors.mqtt.ConsumeMQTT",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "eb63fee5-0b16-3471-b267-94114457ec3e",
+            "instanceIdentifier" : "385cd8c3-087e-3ae6-83d7-5c589cd3a357",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "RouteOnAttribute",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 2376.7197029400795,
+              "y" : -190.80507509950894
+            },
+            "properties" : {
+              "start_of_cycle_ts" : "${start_of_cycle_ts:isEmpty():not()}",
+              "Routing Strategy" : "Route to Property name",
+              "stoppage_ts" : "${stoppage_ts:isEmpty():not()}",
+              "fault_reset_ts" : "${fault_reset_ts:isEmpty():not()}"
+            },
+            "propertyDescriptors" : {
+              "start_of_cycle_ts" : {
+                "displayName" : "start_of_cycle_ts",
+                "identifiesControllerService" : false,
+                "name" : "start_of_cycle_ts",
+                "sensitive" : false
+              },
+              "Routing Strategy" : {
+                "displayName" : "Routing Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Routing Strategy",
+                "sensitive" : false
+              },
+              "stoppage_ts" : {
+                "displayName" : "stoppage_ts",
+                "identifiesControllerService" : false,
+                "name" : "stoppage_ts",
+                "sensitive" : false
+              },
+              "fault_reset_ts" : {
+                "displayName" : "fault_reset_ts",
+                "identifiesControllerService" : false,
+                "name" : "fault_reset_ts",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "parse.failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-mqtt-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.1"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "PRIMARY",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "04821142-478f-353c-a52b-d55e2982d7d5",
+            "instanceIdentifier" : "c25d6afc-0187-1000-0000-000046264f52",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "TEST_ConsumeMQTT-Activity ",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 1808.0,
+              "y" : -784.0
+            },
+            "properties" : {
+              "Max Queue Size" : "100",
+              "Client ID" : "DEV_NIFI_client_28",
+              "Last Will QoS Level" : "0",
+              "Connection Timeout (seconds)" : "30",
+              "Host name verification enabled" : "false",
+              "Broker URI" : "ssl://172.30.35.90:8883",
+              "add-attributes-as-fields" : "true",
+              "SSL Context Service" : "57831c05-336f-3b11-8c8d-a9eb69adedc8",
+              "Username" : "NIFI_dev",
+              "Session state" : "true",
+              "Session Expiry Interval" : "24 hrs",
+              "Quality of Service(QoS)" : "2",
+              "Topic Filter" : "/LTM/MC-Activity/#",
+              "MQTT Specification Version" : "0",
+              "Keep Alive Interval (seconds)" : "60",
+              "Last Will Retain" : "false"
+            },
+            "propertyDescriptors" : {
+              "Max Queue Size" : {
+                "displayName" : "Max Queue Size",
+                "identifiesControllerService" : false,
+                "name" : "Max Queue Size",
+                "sensitive" : false
+              },
+              "Client ID" : {
+                "displayName" : "Client ID",
+                "identifiesControllerService" : false,
+                "name" : "Client ID",
+                "sensitive" : false
+              },
+              "Last Will QoS Level" : {
+                "displayName" : "Last Will QoS Level",
+                "identifiesControllerService" : false,
+                "name" : "Last Will QoS Level",
+                "sensitive" : false
+              },
+              "Connection Timeout (seconds)" : {
+                "displayName" : "Connection Timeout (seconds)",
+                "identifiesControllerService" : false,
+                "name" : "Connection Timeout (seconds)",
+                "sensitive" : false
+              },
+              "record-writer" : {
+                "displayName" : "Record Writer",
+                "identifiesControllerService" : true,
+                "name" : "record-writer",
+                "sensitive" : false
+              },
+              "Host name verification enabled" : {
+                "displayName" : "Host name verification enabled",
+                "identifiesControllerService" : false,
+                "name" : "Host name verification enabled",
+                "sensitive" : false
+              },
+              "Broker URI" : {
+                "displayName" : "Broker URI",
+                "identifiesControllerService" : false,
+                "name" : "Broker URI",
+                "sensitive" : false
+              },
+              "add-attributes-as-fields" : {
+                "displayName" : "Add attributes as fields",
+                "identifiesControllerService" : false,
+                "name" : "add-attributes-as-fields",
+                "sensitive" : false
+              },
+              "SSL Context Service" : {
+                "displayName" : "SSL Context Service",
+                "identifiesControllerService" : true,
+                "name" : "SSL Context Service",
+                "sensitive" : false
+              },
+              "Username" : {
+                "displayName" : "Username",
+                "identifiesControllerService" : false,
+                "name" : "Username",
+                "sensitive" : false
+              },
+              "Session state" : {
+                "displayName" : "Session state",
+                "identifiesControllerService" : false,
+                "name" : "Session state",
+                "sensitive" : false
+              },
+              "Session Expiry Interval" : {
+                "displayName" : "Session Expiry Interval",
+                "identifiesControllerService" : false,
+                "name" : "Session Expiry Interval",
+                "sensitive" : false
+              },
+              "Quality of Service(QoS)" : {
+                "displayName" : "Quality of Service (QoS)",
+                "identifiesControllerService" : false,
+                "name" : "Quality of Service(QoS)",
+                "sensitive" : false
+              },
+              "Last Will Message" : {
+                "displayName" : "Last Will Message",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Message",
+                "sensitive" : false
+              },
+              "Last Will Topic" : {
+                "displayName" : "Last Will Topic",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Topic",
+                "sensitive" : false
+              },
+              "Topic Filter" : {
+                "displayName" : "Topic Filter",
+                "identifiesControllerService" : false,
+                "name" : "Topic Filter",
+                "sensitive" : false
+              },
+              "record-reader" : {
+                "displayName" : "Record Reader",
+                "identifiesControllerService" : true,
+                "name" : "record-reader",
+                "sensitive" : false
+              },
+              "Group ID" : {
+                "displayName" : "Group ID",
+                "identifiesControllerService" : false,
+                "name" : "Group ID",
+                "sensitive" : false
+              },
+              "message-demarcator" : {
+                "displayName" : "Message Demarcator",
+                "identifiesControllerService" : false,
+                "name" : "message-demarcator",
+                "sensitive" : false
+              },
+              "MQTT Specification Version" : {
+                "displayName" : "MQTT Specification Version",
+                "identifiesControllerService" : false,
+                "name" : "MQTT Specification Version",
+                "sensitive" : false
+              },
+              "Keep Alive Interval (seconds)" : {
+                "displayName" : "Keep Alive Interval (seconds)",
+                "identifiesControllerService" : false,
+                "name" : "Keep Alive Interval (seconds)",
+                "sensitive" : false
+              },
+              "Password" : {
+                "displayName" : "Password",
+                "identifiesControllerService" : false,
+                "name" : "Password",
+                "sensitive" : true
+              },
+              "Last Will Retain" : {
+                "displayName" : "Last Will Retain",
+                "identifiesControllerService" : false,
+                "name" : "Last Will Retain",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "DISABLED",
+            "schedulingPeriod" : "1 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.mqtt.ConsumeMQTT",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "e6aaea49-50d3-3624-92e1-9b5d606aba77",
+            "instanceIdentifier" : "813d0a4e-ebbb-3fa6-bf02-ab903abec358",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "EvaluateJsonPath",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 2378.1125252057045,
+              "y" : -384.4109438975462
+            },
+            "properties" : {
+              "Destination" : "flowfile-attribute",
+              "start_of_cycle_ts" : "$.StartOfCycleTimeStamp",
+              "stoppage_ts" : "$.StoppageTimeStamp",
+              "machine" : "$.MachineName",
+              "fault_reset_ts" : "$.FaultResetTimeStamp",
+              "Return Type" : "auto-detect",
+              "Null Value Representation" : "empty string",
+              "message" : "$.MessageText",
+              "facility" : "$.SiteID",
+              "Path Not Found Behavior" : "ignore",
+              "stoppage_fault_code" : "$.StoppageFaultCode"
+            },
+            "propertyDescriptors" : {
+              "Destination" : {
+                "displayName" : "Destination",
+                "identifiesControllerService" : false,
+                "name" : "Destination",
+                "sensitive" : false
+              },
+              "start_of_cycle_ts" : {
+                "displayName" : "start_of_cycle_ts",
+                "identifiesControllerService" : false,
+                "name" : "start_of_cycle_ts",
+                "sensitive" : false
+              },
+              "stoppage_ts" : {
+                "displayName" : "stoppage_ts",
+                "identifiesControllerService" : false,
+                "name" : "stoppage_ts",
+                "sensitive" : false
+              },
+              "machine" : {
+                "displayName" : "machine",
+                "identifiesControllerService" : false,
+                "name" : "machine",
+                "sensitive" : false
+              },
+              "fault_reset_ts" : {
+                "displayName" : "fault_reset_ts",
+                "identifiesControllerService" : false,
+                "name" : "fault_reset_ts",
+                "sensitive" : false
+              },
+              "Return Type" : {
+                "displayName" : "Return Type",
+                "identifiesControllerService" : false,
+                "name" : "Return Type",
+                "sensitive" : false
+              },
+              "Null Value Representation" : {
+                "displayName" : "Null Value Representation",
+                "identifiesControllerService" : false,
+                "name" : "Null Value Representation",
+                "sensitive" : false
+              },
+              "message" : {
+                "displayName" : "message",
+                "identifiesControllerService" : false,
+                "name" : "message",
+                "sensitive" : false
+              },
+              "facility" : {
+                "displayName" : "facility",
+                "identifiesControllerService" : false,
+                "name" : "facility",
+                "sensitive" : false
+              },
+              "Path Not Found Behavior" : {
+                "displayName" : "Path Not Found Behavior",
+                "identifiesControllerService" : false,
+                "name" : "Path Not Found Behavior",
+                "sensitive" : false
+              },
+              "stoppage_fault_code" : {
+                "displayName" : "stoppage_fault_code",
+                "identifiesControllerService" : false,
+                "name" : "stoppage_fault_code",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "success", "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 3,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "e02542f5-8839-3be1-90a8-9866982a0915",
+            "instanceIdentifier" : "4fb5effa-4446-30a3-86f5-5ba253283ae5",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "PutSQL start_of_cycle_ts",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 3024.0,
+              "y" : -16.0
+            },
+            "properties" : {
+              "Support Fragmented Transactions" : "false",
+              "putsql-sql-statement" : "insert into mc_activity \n(machine,facility, start_of_cycle_ts,added_on, record_ts)\nvalues ('${machine}','${facility}','${start_of_cycle_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${start_of_cycle_ts})}', '${now()}', '${start_of_cycle_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${start_of_cycle_ts})}')",
+              "Batch Size" : "1",
+              "Obtain Generated Keys" : "false",
+              "JDBC Connection Pool" : "843e3608-7911-3963-8ec6-24704577eca1",
+              "database-session-autocommit" : "false",
+              "rollback-on-failure" : "false"
+            },
+            "propertyDescriptors" : {
+              "Support Fragmented Transactions" : {
+                "displayName" : "Support Fragmented Transactions",
+                "identifiesControllerService" : false,
+                "name" : "Support Fragmented Transactions",
+                "sensitive" : false
+              },
+              "putsql-sql-statement" : {
+                "displayName" : "SQL Statement",
+                "identifiesControllerService" : false,
+                "name" : "putsql-sql-statement",
+                "sensitive" : false
+              },
+              "Transaction Timeout" : {
+                "displayName" : "Transaction Timeout",
+                "identifiesControllerService" : false,
+                "name" : "Transaction Timeout",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Obtain Generated Keys" : {
+                "displayName" : "Obtain Generated Keys",
+                "identifiesControllerService" : false,
+                "name" : "Obtain Generated Keys",
+                "sensitive" : false
+              },
+              "JDBC Connection Pool" : {
+                "displayName" : "JDBC Connection Pool",
+                "identifiesControllerService" : true,
+                "name" : "JDBC Connection Pool",
+                "sensitive" : false
+              },
+              "database-session-autocommit" : {
+                "displayName" : "Database Session AutoCommit",
+                "identifiesControllerService" : false,
+                "name" : "database-session-autocommit",
+                "sensitive" : false
+              },
+              "rollback-on-failure" : {
+                "displayName" : "Rollback On Failure",
+                "identifiesControllerService" : false,
+                "name" : "rollback-on-failure",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.PutSQL",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "success", "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "5bc8a8a5-0a06-3747-90ea-2d2a4a3ca7e6",
+            "instanceIdentifier" : "e89118dd-0fba-3faa-8a2c-e9ebbce70937",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "AttributesToJSON",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 2376.7197029400795,
+              "y" : 29.64094545549824
+            },
+            "properties" : {
+              "Destination" : "flowfile-attribute",
+              "Null Value" : "false",
+              "Include Core Attributes" : "true"
+            },
+            "propertyDescriptors" : {
+              "attributes-to-json-regex" : {
+                "displayName" : "Attributes Regular Expression",
+                "identifiesControllerService" : false,
+                "name" : "attributes-to-json-regex",
+                "sensitive" : false
+              },
+              "Destination" : {
+                "displayName" : "Destination",
+                "identifiesControllerService" : false,
+                "name" : "Destination",
+                "sensitive" : false
+              },
+              "Null Value" : {
+                "displayName" : "Null Value",
+                "identifiesControllerService" : false,
+                "name" : "Null Value",
+                "sensitive" : false
+              },
+              "Attributes List" : {
+                "displayName" : "Attributes List",
+                "identifiesControllerService" : false,
+                "name" : "Attributes List",
+                "sensitive" : false
+              },
+              "Include Core Attributes" : {
+                "displayName" : "Include Core Attributes",
+                "identifiesControllerService" : false,
+                "name" : "Include Core Attributes",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "success", "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 3,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "70ecd7db-09c6-3f15-9fd3-20702fa99b4a",
+            "instanceIdentifier" : "96c5e8a3-e2e5-3c30-8760-3380addc7173",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "PutSQL stoppage_ts",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 3008.0,
+              "y" : -416.0
+            },
+            "properties" : {
+              "Support Fragmented Transactions" : "false",
+              "putsql-sql-statement" : "insert into mc_activity \n(machine, facility, stoppage_ts,message,stoppage_fault_code, added_on, record_ts)\nvalues ('${machine}','${facility}','${stoppage_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${stoppage_ts})}','${message}','${stoppage_fault_code}', '${now()}', '${stoppage_ts:isEmpty():ifElse('0001-01-01T00:00:00.000Z', ${stoppage_ts})}')",
+              "Batch Size" : "1",
+              "Obtain Generated Keys" : "false",
+              "JDBC Connection Pool" : "843e3608-7911-3963-8ec6-24704577eca1",
+              "database-session-autocommit" : "false",
+              "rollback-on-failure" : "false"
+            },
+            "propertyDescriptors" : {
+              "Support Fragmented Transactions" : {
+                "displayName" : "Support Fragmented Transactions",
+                "identifiesControllerService" : false,
+                "name" : "Support Fragmented Transactions",
+                "sensitive" : false
+              },
+              "putsql-sql-statement" : {
+                "displayName" : "SQL Statement",
+                "identifiesControllerService" : false,
+                "name" : "putsql-sql-statement",
+                "sensitive" : false
+              },
+              "Transaction Timeout" : {
+                "displayName" : "Transaction Timeout",
+                "identifiesControllerService" : false,
+                "name" : "Transaction Timeout",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Obtain Generated Keys" : {
+                "displayName" : "Obtain Generated Keys",
+                "identifiesControllerService" : false,
+                "name" : "Obtain Generated Keys",
+                "sensitive" : false
+              },
+              "JDBC Connection Pool" : {
+                "displayName" : "JDBC Connection Pool",
+                "identifiesControllerService" : true,
+                "name" : "JDBC Connection Pool",
+                "sensitive" : false
+              },
+              "database-session-autocommit" : {
+                "displayName" : "Database Session AutoCommit",
+                "identifiesControllerService" : false,
+                "name" : "database-session-autocommit",
+                "sensitive" : false
+              },
+              "rollback-on-failure" : {
+                "displayName" : "Rollback On Failure",
+                "identifiesControllerService" : false,
+                "name" : "rollback-on-failure",
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.PutSQL",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure" ],
+            "backoffMechanism" : "PENALIZE_FLOWFILE",
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-scripting-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.19.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bfa7133e-7a9b-32fe-94cd-db070859772b",
+            "identifier" : "5f5db359-c657-3441-9057-153296b6fd73",
+            "instanceIdentifier" : "efa4a318-ca17-3186-bbd8-5f8a0617acb7",
+            "maxBackoffPeriod" : "10 mins",
+            "name" : "ExecuteScript",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 2376.7197029400795,
+              "y" : -564.4044085225833
+            },
+            "properties" : {
+              "Script Engine" : "python",
+              "Script Body" : "import json \nfrom org.apache.commons.io import IOUtils\n#from org.apache.nifi.processor.io import StandardCharsets \nfrom java.nio.charset import StandardCharsets\nfrom java.io import BufferedReader, InputStreamReader\nfrom org.apache.nifi.processor.io import StreamCallback\n\nclass ModJSON(StreamCallback): \n    error_ = None\n    def __init__(self, flowFile): \n        self.ff = flowFile\n        pass \n    def process(self, inputStream, outputStream): \n        try:\n            message = IOUtils.toString(inputStream, StandardCharsets.UTF_8) \n            #obj = json.loads(text) \n            m_list = []\n\n            data = '@@'\n            json_data =''\n            if message.startswith('@@'):\n                # Removing @@\n                keys=[]\n                values=[]\n                json_key= []\n                json_values=[]\n                for x in message.replace('@@','').split('||'):\n                    keys.append(x.split('::')[0])\n                    values.append(str(x.split('::')[1]).isdigit() and int(x.split('::')[1]) or x.split('::')[1])\n                    if x.split('::')[0] not in m_list:\n                        data = data + str(x.split('::')[0]) + '::' + x.split('::')[1] + '||'\n                        json_key.append(x.split('::')[0])\n                        json_values.append(str(x.split('::')[1]).isdigit() and int(x.split('::')[1]) or x.split('::')[1])\n            data=data[:len(data)-2]\n            newObj = dict(zip(keys, values))\n            outputStream.write(bytearray(json.dumps(newObj).encode('utf-8')))        \n        except Exception as e:\n            self.error_ = str(e)\n            pass\n    def getError(self):\n        return self.error_\n\nflowFile = session.get() \nif (flowFile != None): \n    #state = flowFile.getAttribute('state')\n    modjson = ModJSON(flowFile)\n    flowFile = session.write(flowFile, modjson ) \n    flowFile = session.putAttribute(flowFile, \"filename\", flowFile.getAttribute('filename').split('.')[0]+'_parsed.json') \n    flowFile = session.putAttribute(flowFile, \"mqtt_parse_error\", str(modjson.getError())) \n    session.transfer(flowFile, REL_SUCCESS) \n    session.commit()"
+            },
+            "propertyDescriptors" : {
+              "Script File" : {
+                "displayName" : "Script File",
+                "identifiesControllerService" : false,
+                "name" : "Script File",
+                "resourceDefinition" : {
+                  "cardinality" : "SINGLE",
+                  "resourceTypes" : [ "FILE" ]
+                },
+                "sensitive" : false
+              },
+              "Script Engine" : {
+                "displayName" : "Script Engine",
+                "identifiesControllerService" : false,
+                "name" : "Script Engine",
+                "sensitive" : false
+              },
+              "Script Body" : {
+                "displayName" : "Script Body",
+                "identifiesControllerService" : false,
+                "name" : "Script Body",
+                "sensitive" : false
+              },
+              "Module Directory" : {
+                "displayName" : "Module Directory",
+                "identifiesControllerService" : false,
+                "name" : "Module Directory",
+                "resourceDefinition" : {
+                  "cardinality" : "MULTIPLE",
+                  "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                },
+                "sensitive" : false
+              }
+            },
+            "retriedRelationships" : [ ],
+            "retryCount" : 10,
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.script.ExecuteScript",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "parse.failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-mqtt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "f191ca59-a393-3c2d-9177-d0b5e6efdad6",
+          "instanceIdentifier" : "c23ff5e5-0187-1000-0000-000014612560",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ConsumeMQTT",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 440.0,
+            "y" : 200.0
+          },
+          "properties" : {
+            "Max Queue Size" : "100",
+            "Client ID" : "NIFI_client_26",
+            "Last Will QoS Level" : "0",
+            "Connection Timeout (seconds)" : "30",
+            "Host name verification enabled" : "false",
+            "Broker URI" : "ssl://172.30.35.90:8883",
+            "add-attributes-as-fields" : "true",
+            "SSL Context Service" : "57831c05-336f-3b11-8c8d-a9eb69adedc8",
+            "Username" : "NIFI_prod",
+            "Session state" : "true",
+            "Session Expiry Interval" : "24 hrs",
+            "Quality of Service(QoS)" : "2",
+            "Topic Filter" : "/monitoring/PC-Standard/#",
+            "MQTT Specification Version" : "0",
+            "Keep Alive Interval (seconds)" : "60",
+            "Last Will Retain" : "false"
+          },
+          "propertyDescriptors" : {
+            "Max Queue Size" : {
+              "displayName" : "Max Queue Size",
+              "identifiesControllerService" : false,
+              "name" : "Max Queue Size",
+              "sensitive" : false
+            },
+            "Client ID" : {
+              "displayName" : "Client ID",
+              "identifiesControllerService" : false,
+              "name" : "Client ID",
+              "sensitive" : false
+            },
+            "Last Will QoS Level" : {
+              "displayName" : "Last Will QoS Level",
+              "identifiesControllerService" : false,
+              "name" : "Last Will QoS Level",
+              "sensitive" : false
+            },
+            "Connection Timeout (seconds)" : {
+              "displayName" : "Connection Timeout (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Connection Timeout (seconds)",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "Host name verification enabled" : {
+              "displayName" : "Host name verification enabled",
+              "identifiesControllerService" : false,
+              "name" : "Host name verification enabled",
+              "sensitive" : false
+            },
+            "Broker URI" : {
+              "displayName" : "Broker URI",
+              "identifiesControllerService" : false,
+              "name" : "Broker URI",
+              "sensitive" : false
+            },
+            "add-attributes-as-fields" : {
+              "displayName" : "Add attributes as fields",
+              "identifiesControllerService" : false,
+              "name" : "add-attributes-as-fields",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "Username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "Username",
+              "sensitive" : false
+            },
+            "Session state" : {
+              "displayName" : "Session state",
+              "identifiesControllerService" : false,
+              "name" : "Session state",
+              "sensitive" : false
+            },
+            "Session Expiry Interval" : {
+              "displayName" : "Session Expiry Interval",
+              "identifiesControllerService" : false,
+              "name" : "Session Expiry Interval",
+              "sensitive" : false
+            },
+            "Quality of Service(QoS)" : {
+              "displayName" : "Quality of Service (QoS)",
+              "identifiesControllerService" : false,
+              "name" : "Quality of Service(QoS)",
+              "sensitive" : false
+            },
+            "Last Will Message" : {
+              "displayName" : "Last Will Message",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Message",
+              "sensitive" : false
+            },
+            "Last Will Topic" : {
+              "displayName" : "Last Will Topic",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Topic",
+              "sensitive" : false
+            },
+            "Topic Filter" : {
+              "displayName" : "Topic Filter",
+              "identifiesControllerService" : false,
+              "name" : "Topic Filter",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "Group ID" : {
+              "displayName" : "Group ID",
+              "identifiesControllerService" : false,
+              "name" : "Group ID",
+              "sensitive" : false
+            },
+            "message-demarcator" : {
+              "displayName" : "Message Demarcator",
+              "identifiesControllerService" : false,
+              "name" : "message-demarcator",
+              "sensitive" : false
+            },
+            "MQTT Specification Version" : {
+              "displayName" : "MQTT Specification Version",
+              "identifiesControllerService" : false,
+              "name" : "MQTT Specification Version",
+              "sensitive" : false
+            },
+            "Keep Alive Interval (seconds)" : {
+              "displayName" : "Keep Alive Interval (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Keep Alive Interval (seconds)",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            },
+            "Last Will Retain" : {
+              "displayName" : "Last Will Retain",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Retain",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "1 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : {
+            "background-color" : "#30a3f0"
+          },
+          "type" : "org.apache.nifi.processors.mqtt.ConsumeMQTT",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "6db348cf-ddbd-31d4-bf3b-d4fadebc6151",
+          "instanceIdentifier" : "0f275e09-09d1-3428-9cff-4c11ec4b8635",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "EvaluateJsonPath",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 445.41397151469414,
+            "y" : 605.6252623478762
+          },
+          "properties" : {
+            "Destination" : "flowfile-attribute",
+            "device_id" : "$.DeviceID",
+            "Return Type" : "auto-detect",
+            "Null Value Representation" : "empty string",
+            "device_type" : "$.DeviceType",
+            "ip_address" : "$.IpAddress",
+            "snmp_community" : "$.SnmpCommunity",
+            "Path Not Found Behavior" : "ignore",
+            "mac_address" : "$.MacAddress",
+            "snmp_port" : "$.SnmpPort",
+            "plant_code" : "$.PlantCode",
+            "snmp_version" : "$.SnmpVersion",
+            "ts" : "$.TimeStamp"
+          },
+          "propertyDescriptors" : {
+            "Destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "Destination",
+              "sensitive" : false
+            },
+            "device_id" : {
+              "displayName" : "device_id",
+              "identifiesControllerService" : false,
+              "name" : "device_id",
+              "sensitive" : false
+            },
+            "Return Type" : {
+              "displayName" : "Return Type",
+              "identifiesControllerService" : false,
+              "name" : "Return Type",
+              "sensitive" : false
+            },
+            "Null Value Representation" : {
+              "displayName" : "Null Value Representation",
+              "identifiesControllerService" : false,
+              "name" : "Null Value Representation",
+              "sensitive" : false
+            },
+            "device_type" : {
+              "displayName" : "device_type",
+              "identifiesControllerService" : false,
+              "name" : "device_type",
+              "sensitive" : false
+            },
+            "ip_address" : {
+              "displayName" : "ip_address",
+              "identifiesControllerService" : false,
+              "name" : "ip_address",
+              "sensitive" : false
+            },
+            "snmp_community" : {
+              "displayName" : "snmp_community",
+              "identifiesControllerService" : false,
+              "name" : "snmp_community",
+              "sensitive" : false
+            },
+            "Path Not Found Behavior" : {
+              "displayName" : "Path Not Found Behavior",
+              "identifiesControllerService" : false,
+              "name" : "Path Not Found Behavior",
+              "sensitive" : false
+            },
+            "mac_address" : {
+              "displayName" : "mac_address",
+              "identifiesControllerService" : false,
+              "name" : "mac_address",
+              "sensitive" : false
+            },
+            "snmp_port" : {
+              "displayName" : "snmp_port",
+              "identifiesControllerService" : false,
+              "name" : "snmp_port",
+              "sensitive" : false
+            },
+            "plant_code" : {
+              "displayName" : "plant_code",
+              "identifiesControllerService" : false,
+              "name" : "plant_code",
+              "sensitive" : false
+            },
+            "snmp_version" : {
+              "displayName" : "snmp_version",
+              "identifiesControllerService" : false,
+              "name" : "snmp_version",
+              "sensitive" : false
+            },
+            "ts" : {
+              "displayName" : "ts",
+              "identifiesControllerService" : false,
+              "name" : "ts",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "aefd1949-dc76-39e7-8449-0d81b6e2e4e4",
+          "instanceIdentifier" : "b94de19d-0474-3f5d-a490-28f5488a209d",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "FailureCatcher",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1509.393897214312,
+            "y" : 1029.8916074641181
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "Log FlowFile Properties" : "true",
+            "Log Level" : "error",
+            "attributes-to-log-regex" : ".*",
+            "Output Format" : "Line per Attribute",
+            "Log Payload" : "false"
+          },
+          "propertyDescriptors" : {
+            "Log prefix" : {
+              "displayName" : "Log prefix",
+              "identifiesControllerService" : false,
+              "name" : "Log prefix",
+              "sensitive" : false
+            },
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "Log FlowFile Properties" : {
+              "displayName" : "Log FlowFile Properties",
+              "identifiesControllerService" : false,
+              "name" : "Log FlowFile Properties",
+              "sensitive" : false
+            },
+            "Log Level" : {
+              "displayName" : "Log Level",
+              "identifiesControllerService" : false,
+              "name" : "Log Level",
+              "sensitive" : false
+            },
+            "attributes-to-ignore-regex" : {
+              "displayName" : "Attributes to Ignore by Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-to-ignore-regex",
+              "sensitive" : false
+            },
+            "Attributes to Ignore" : {
+              "displayName" : "Attributes to Ignore",
+              "identifiesControllerService" : false,
+              "name" : "Attributes to Ignore",
+              "sensitive" : false
+            },
+            "Attributes to Log" : {
+              "displayName" : "Attributes to Log",
+              "identifiesControllerService" : false,
+              "name" : "Attributes to Log",
+              "sensitive" : false
+            },
+            "attributes-to-log-regex" : {
+              "displayName" : "Attributes to Log by Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-to-log-regex",
+              "sensitive" : false
+            },
+            "Output Format" : {
+              "displayName" : "Output Format",
+              "identifiesControllerService" : false,
+              "name" : "Output Format",
+              "sensitive" : false
+            },
+            "Log Payload" : {
+              "displayName" : "Log Payload",
+              "identifiesControllerService" : false,
+              "name" : "Log Payload",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.LogAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "parse.failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-mqtt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "f8fc1b7c-8e2d-33a7-a888-92e51fc8d95d",
+          "instanceIdentifier" : "c24ebed9-0187-1000-0000-000025155e23",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "TEST_ConsumeMQTT",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -184.0,
+            "y" : 200.0
+          },
+          "properties" : {
+            "Max Queue Size" : "100",
+            "Client ID" : "DEV_NIFI_client_26",
+            "Last Will QoS Level" : "0",
+            "Connection Timeout (seconds)" : "30",
+            "Host name verification enabled" : "false",
+            "Broker URI" : "ssl://172.30.35.90:8883",
+            "add-attributes-as-fields" : "true",
+            "SSL Context Service" : "57831c05-336f-3b11-8c8d-a9eb69adedc8",
+            "Username" : "NIFI_dev",
+            "Session state" : "true",
+            "Session Expiry Interval" : "24 hrs",
+            "Quality of Service(QoS)" : "2",
+            "Topic Filter" : "/monitoring/PC-Standard/#",
+            "MQTT Specification Version" : "0",
+            "Keep Alive Interval (seconds)" : "60",
+            "Last Will Retain" : "false"
+          },
+          "propertyDescriptors" : {
+            "Max Queue Size" : {
+              "displayName" : "Max Queue Size",
+              "identifiesControllerService" : false,
+              "name" : "Max Queue Size",
+              "sensitive" : false
+            },
+            "Client ID" : {
+              "displayName" : "Client ID",
+              "identifiesControllerService" : false,
+              "name" : "Client ID",
+              "sensitive" : false
+            },
+            "Last Will QoS Level" : {
+              "displayName" : "Last Will QoS Level",
+              "identifiesControllerService" : false,
+              "name" : "Last Will QoS Level",
+              "sensitive" : false
+            },
+            "Connection Timeout (seconds)" : {
+              "displayName" : "Connection Timeout (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Connection Timeout (seconds)",
+              "sensitive" : false
+            },
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "Host name verification enabled" : {
+              "displayName" : "Host name verification enabled",
+              "identifiesControllerService" : false,
+              "name" : "Host name verification enabled",
+              "sensitive" : false
+            },
+            "Broker URI" : {
+              "displayName" : "Broker URI",
+              "identifiesControllerService" : false,
+              "name" : "Broker URI",
+              "sensitive" : false
+            },
+            "add-attributes-as-fields" : {
+              "displayName" : "Add attributes as fields",
+              "identifiesControllerService" : false,
+              "name" : "add-attributes-as-fields",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "Username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "Username",
+              "sensitive" : false
+            },
+            "Session state" : {
+              "displayName" : "Session state",
+              "identifiesControllerService" : false,
+              "name" : "Session state",
+              "sensitive" : false
+            },
+            "Session Expiry Interval" : {
+              "displayName" : "Session Expiry Interval",
+              "identifiesControllerService" : false,
+              "name" : "Session Expiry Interval",
+              "sensitive" : false
+            },
+            "Quality of Service(QoS)" : {
+              "displayName" : "Quality of Service (QoS)",
+              "identifiesControllerService" : false,
+              "name" : "Quality of Service(QoS)",
+              "sensitive" : false
+            },
+            "Last Will Message" : {
+              "displayName" : "Last Will Message",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Message",
+              "sensitive" : false
+            },
+            "Last Will Topic" : {
+              "displayName" : "Last Will Topic",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Topic",
+              "sensitive" : false
+            },
+            "Topic Filter" : {
+              "displayName" : "Topic Filter",
+              "identifiesControllerService" : false,
+              "name" : "Topic Filter",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "Group ID" : {
+              "displayName" : "Group ID",
+              "identifiesControllerService" : false,
+              "name" : "Group ID",
+              "sensitive" : false
+            },
+            "message-demarcator" : {
+              "displayName" : "Message Demarcator",
+              "identifiesControllerService" : false,
+              "name" : "message-demarcator",
+              "sensitive" : false
+            },
+            "MQTT Specification Version" : {
+              "displayName" : "MQTT Specification Version",
+              "identifiesControllerService" : false,
+              "name" : "MQTT Specification Version",
+              "sensitive" : false
+            },
+            "Keep Alive Interval (seconds)" : {
+              "displayName" : "Keep Alive Interval (seconds)",
+              "identifiesControllerService" : false,
+              "name" : "Keep Alive Interval (seconds)",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            },
+            "Last Will Retain" : {
+              "displayName" : "Last Will Retain",
+              "identifiesControllerService" : false,
+              "name" : "Last Will Retain",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "1 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.mqtt.ConsumeMQTT",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-scripting-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "91558807-0d09-3d2c-8598-c78f73afdaec",
+          "instanceIdentifier" : "d82a9281-eecd-3bf5-9101-f34541694a20",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ExecuteScript",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 440.41397151469414,
+            "y" : 401.8812464990842
+          },
+          "properties" : {
+            "Script Engine" : "python",
+            "Script Body" : "import json \nfrom org.apache.commons.io import IOUtils\n#from org.apache.nifi.processor.io import StandardCharsets \nfrom java.nio.charset import StandardCharsets\nfrom java.io import BufferedReader, InputStreamReader\nfrom org.apache.nifi.processor.io import StreamCallback\n\nclass ModJSON(StreamCallback): \n    error_ = None\n    def __init__(self, flowFile): \n        self.ff = flowFile\n        pass \n    def process(self, inputStream, outputStream): \n        try:\n            message = IOUtils.toString(inputStream, StandardCharsets.UTF_8) \n            #obj = json.loads(text) \n            m_list = []\n\n            data = '@@'\n            json_data =''\n            if message.startswith('@@'):\n                # Removing @@\n                keys=[]\n                values=[]\n                json_key= []\n                json_values=[]\n                for x in message.replace('@@','').split('||'):\n                    keys.append(x.split('::')[0])\n                    values.append(str(x.split('::')[1]).isdigit() and int(x.split('::')[1]) or x.split('::')[1])\n                    if x.split('::')[0] not in m_list:\n                        data = data + str(x.split('::')[0]) + '::' + x.split('::')[1] + '||'\n                        json_key.append(x.split('::')[0])\n                        json_values.append(str(x.split('::')[1]).isdigit() and int(x.split('::')[1]) or x.split('::')[1])\n            data=data[:len(data)-2]\n            newObj = dict(zip(keys, values))\n            outputStream.write(bytearray(json.dumps(newObj).encode('utf-8')))        \n        except Exception as e:\n            self.error_ = str(e)\n            pass\n    def getError(self):\n        return self.error_\n\nflowFile = session.get() \nif (flowFile != None): \n    #state = flowFile.getAttribute('state')\n    modjson = ModJSON(flowFile)\n    flowFile = session.write(flowFile, modjson ) \n    flowFile = session.putAttribute(flowFile, \"filename\", flowFile.getAttribute('filename').split('.')[0]+'_parsed.json') \n    flowFile = session.putAttribute(flowFile, \"mqtt_parse_error\", str(modjson.getError())) \n    session.transfer(flowFile, REL_SUCCESS) \n    session.commit()"
+          },
+          "propertyDescriptors" : {
+            "Script File" : {
+              "displayName" : "Script File",
+              "identifiesControllerService" : false,
+              "name" : "Script File",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "Script Engine" : {
+              "displayName" : "Script Engine",
+              "identifiesControllerService" : false,
+              "name" : "Script Engine",
+              "sensitive" : false
+            },
+            "Script Body" : {
+              "displayName" : "Script Body",
+              "identifiesControllerService" : false,
+              "name" : "Script Body",
+              "sensitive" : false
+            },
+            "Module Directory" : {
+              "displayName" : "Module Directory",
+              "identifiesControllerService" : false,
+              "name" : "Module Directory",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+              },
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.script.ExecuteScript",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "b36e3ece-0666-3156-adea-734ccc535d9b",
+          "instanceIdentifier" : "cd8d2d41-c863-351b-a22f-4d07b1a03f93",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Update Sql Args",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 449.5213173436755,
+            "y" : 806.4892725665454
+          },
+          "properties" : {
+            "sql.args.8.type" : "12",
+            "sql.args.1.value" : "${mac_address}",
+            "sql.args.2.type" : "12",
+            "sql.args.2.value" : "${ip_address}",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "sql.args.8.value" : "${snmp_community}",
+            "sql.args.5.type" : "12",
+            "sql.args.6.value" : "${snmp_version}",
+            "sql.args.3.value" : "${device_id}",
+            "sql.args.4.type" : "12",
+            "sql.args.7.type" : "12",
+            "sql.args.7.value" : "${snmp_port}",
+            "sql.args.4.value" : "${device_type}",
+            "sql.args.9.type" : "12",
+            "sql.args.9.value" : "${ts}",
+            "sql.args.1.type" : "12",
+            "sql.args.6.type" : "12",
+            "sql.args.5.value" : "${plant_code}",
+            "sql.args.3.type" : "12"
+          },
+          "propertyDescriptors" : {
+            "sql.args.8.type" : {
+              "displayName" : "sql.args.8.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.8.type",
+              "sensitive" : false
+            },
+            "sql.args.1.value" : {
+              "displayName" : "sql.args.1.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.1.value",
+              "sensitive" : false
+            },
+            "sql.args.2.type" : {
+              "displayName" : "sql.args.2.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.2.type",
+              "sensitive" : false
+            },
+            "sql.args.2.value" : {
+              "displayName" : "sql.args.2.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.2.value",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "sql.args.8.value" : {
+              "displayName" : "sql.args.8.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.8.value",
+              "sensitive" : false
+            },
+            "sql.args.5.type" : {
+              "displayName" : "sql.args.5.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.5.type",
+              "sensitive" : false
+            },
+            "sql.args.6.value" : {
+              "displayName" : "sql.args.6.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.6.value",
+              "sensitive" : false
+            },
+            "sql.args.3.value" : {
+              "displayName" : "sql.args.3.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.3.value",
+              "sensitive" : false
+            },
+            "sql.args.4.type" : {
+              "displayName" : "sql.args.4.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.4.type",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "sql.args.7.type" : {
+              "displayName" : "sql.args.7.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.7.type",
+              "sensitive" : false
+            },
+            "sql.args.7.value" : {
+              "displayName" : "sql.args.7.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.7.value",
+              "sensitive" : false
+            },
+            "sql.args.4.value" : {
+              "displayName" : "sql.args.4.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.4.value",
+              "sensitive" : false
+            },
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "sql.args.9.type" : {
+              "displayName" : "sql.args.9.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.9.type",
+              "sensitive" : false
+            },
+            "sql.args.9.value" : {
+              "displayName" : "sql.args.9.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.9.value",
+              "sensitive" : false
+            },
+            "sql.args.1.type" : {
+              "displayName" : "sql.args.1.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.1.type",
+              "sensitive" : false
+            },
+            "sql.args.6.type" : {
+              "displayName" : "sql.args.6.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.6.type",
+              "sensitive" : false
+            },
+            "sql.args.5.value" : {
+              "displayName" : "sql.args.5.value",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.5.value",
+              "sensitive" : false
+            },
+            "sql.args.3.type" : {
+              "displayName" : "sql.args.3.type",
+              "identifiesControllerService" : false,
+              "name" : "sql.args.3.type",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "188af16b-ea03-3b54-a48e-0c2f8b2d6906",
+          "identifier" : "2bbe8bc8-4f95-31b3-bb38-3e561294ba5e",
+          "instanceIdentifier" : "2ab250a0-68b6-383f-bbbe-964fe6087df7",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Insert into mqtt_heartbeat",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1112.0,
+            "y" : 800.0
+          },
+          "properties" : {
+            "Support Fragmented Transactions" : "false",
+            "putsql-sql-statement" : "insert into mqtt_heartbeat \n(mac_address,ip_address,device_id, device_type, plant_code, snmp_version, snmp_port, snmp_community, ts)\nvalues (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "Batch Size" : "100",
+            "Obtain Generated Keys" : "false",
+            "JDBC Connection Pool" : "843e3608-7911-3963-8ec6-24704577eca1",
+            "database-session-autocommit" : "false",
+            "rollback-on-failure" : "false"
+          },
+          "propertyDescriptors" : {
+            "Support Fragmented Transactions" : {
+              "displayName" : "Support Fragmented Transactions",
+              "identifiesControllerService" : false,
+              "name" : "Support Fragmented Transactions",
+              "sensitive" : false
+            },
+            "putsql-sql-statement" : {
+              "displayName" : "SQL Statement",
+              "identifiesControllerService" : false,
+              "name" : "putsql-sql-statement",
+              "sensitive" : false
+            },
+            "Transaction Timeout" : {
+              "displayName" : "Transaction Timeout",
+              "identifiesControllerService" : false,
+              "name" : "Transaction Timeout",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Obtain Generated Keys" : {
+              "displayName" : "Obtain Generated Keys",
+              "identifiesControllerService" : false,
+              "name" : "Obtain Generated Keys",
+              "sensitive" : false
+            },
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
+              "sensitive" : false
+            },
+            "database-session-autocommit" : {
+              "displayName" : "Database Session AutoCommit",
+              "identifiesControllerService" : false,
+              "name" : "database-session-autocommit",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutSQL",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
