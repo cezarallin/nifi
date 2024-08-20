@@ -1,0 +1,12 @@
+flows:
+  6c019af4-1eeb-48e3-adba-1d5113148914:
+    ver: 3
+    file: Energy_Monitoring_v2.snapshot
+    comments: |
+      Third version
+    author: anonymous
+    created: 1724142646508
+    flowName: Energy_Monitoring_v2
+    flowDesc: ''
+layoutVer: 1
+bucketId: 3d4a7867-f0b5-4fc3-a9f6-6afe00d50889
